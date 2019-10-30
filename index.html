@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>seun</title>
+<link rel="stylesheet" href="style.css">
+<link href="hamburgers.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="navbar">
+	<div class="nav-holder" id="nav">
+		<ul>
+		<li class="nav-link"><a href="https://codepen.io/slarin/">about</a></li>
+    	<li class="nav-link"><a href="https://github.com/slarin">code</a></li>
+    	<li class="nav-link"><a href="mailto:seunfadeyi@gmail.com">contact</a></li>
+    	</ul>
+		</div>
+
+		<button id="burg" class="hamburger hamburger--spin" type="button" onclick="burger()">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+</div>
+
+<div id="welcome-section" class="banner">
+<div id="label" class="typewriter">
+<h1>Hi, I'm Seun.</h1>
+<p> a web developer, &#128578;</p>
+</div>
+</div>
+
+<div id="projects">
+<h3>I've worked on these so far ... </h3>
+<div id="catalogue">
+
+<div id="" class="boxes blank-boxes"></div>
+<div id="one" class="boxes" onClick="window.location.href='https://rawcdn.githack.com/slarin/Church-Website-Template/46c9b454fc35b58977b4446fc1d433d534811ee0/index.html'"><p>Church</p></div>
+<div id="" class="boxes blank-boxes"></div>
+<div id="five" class="boxes" onClick="window.location.href='https://damp-stream-95476.herokuapp.com/'"><p>Search Photos</p></div>
+<div id="two" class="boxes" onClick="window.location.href='https://cdn.statically.io/gh/slarin/restaurant-template/b2d7cae0/Joes/index.html'"><p>Joe's Kitchen</p></div>
+<div id="six" class="boxes" onClick="window.location.href='http://youthful-metal.surge.sh/'"><p>Gravity</p></div>
+<div id="four" class="boxes" onClick="window.location.href='https://codepen.io/slarin/full/XGORQy'"><p>Product Landing Page</p></div>
+<div id="" class="boxes blank-boxes"></div>
+<div id="three" class="boxes" onClick="window.location.href='https://codepen.io/slarin/full/xexjXj'"><p>JS Documentation</p></div>
+
+</div>
+<button class="prjtBtn" onClick="window.location.href='https://github.com/slarin'">Show Others</button>
+</div>
+
+<div id="rug" class="banner">
+<h1>Let's work together ...</h1>
+<p>How do you like your tea?</p>
+<div id="btnHolder">
+<button class="rugBtn" onClick="window.location.href='https://github.com/slarin'">GitHub</button>
+<button class="rugBtn" onClick="window.location.href='mailto:seunfadeyi@gmail.com'">Send E-mail</button>
+<button class="rugBtn" onClick="window.location.href='tel:+2347062246781'">Call Me</button>
+</div>
+
+<div id="footer">
+<p>Image credit: <a href="https://en.wikipedia.org/wiki/Star_Wars">Star Wars</a> starwars.com</p>
+</div>
+</div>
+
+<script>
+	function burger() {
+		let y = document.getElementById('burg');
+		let x = document.getElementById('nav');
+		y.classList.toggle('is-active');
+		x.classList.toggle('active');
+	}
+</script>
+</body>
+</html>

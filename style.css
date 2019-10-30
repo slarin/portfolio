@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding:0px;
+	background-image:url(./assets/Image__213166_1491240125.jpeg);
+	font-family: sans-serif;
+}
+h3{
+	text-align:center;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	color:#fd561e;
+	margin-bottom:5%;
+}
+#burg { display: none;}
+#welcome-section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column nowrap;
+	align-content: center;
+}
+#footer{
+	margin:3% 10% -15% 10%;
+	border:1px solid #E0E0E0;
+	border-radius:5px 5px 0px 0px;
+	background-color:#E0E0E0;
+	padding:1.5%;
+}
+#footer p{
+	font-size:medium;
+	color:#000000;
+}
+#footer a{
+	text-decoration:underline;
+	color:inherit;
+}
+#footer a:hover{
+	color:#2AFF00;
+}
+#projects{
+	margin:3% 5%;
+	border-radius:5px;
+	background-color:rgba(224, 224, 224, 0.322);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+#catalogue{
+	display:grid;
+	grid-template-columns: repeat(3, minmax(30px, 1fr));
+	grid-template-rows: repeat(2, 1fr);
+	align-self: center;
+}
+#label{
+	margin-top: 50vh;
+	display: flex;
+	flex-flow: column nowrap;
+	align-self: center;
+}
+#rug{
+	padding-top:40px;
+	text-align:center;
+}
+#rug>p {
+	color: #2AFF00;
+}
+#btnHolder{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	margin: 0 70px;
+}
+#one{
+	background-image:url(./assets/church.png);
+	background-size:cover;
+}
+#two{
+	background-image:url(./assets/joes.png);
+	background-size:cover;
+}
+#three{
+	background-image:url(./assets/jsDocumentation.png);
+	background-size:cover;
+}
+#four{
+	background-image:url(./assets/fccProductLandingPage.png);
+	background-size:cover;
+}
+#five{
+	background-image:url(./assets/search_phts.png);
+	background-size:cover;
+}
+#six{
+	background-image:url(./assets/gravity.png);
+	background-size:cover;
+}
+.prjtBtn{
+	background-color:#FFFFFF;
+	border:2px solid #F13C00;
+	border-radius:4px;
+	font-size:17px;
+	align-self: center;
+	padding:10px;
+	width:150px;
+	height:40px;
+	padding: 2px;
+	margin: 30px 0;
+}
+.prjtBtn:hover{
+	background-color:#F13C00;
+	color:#FFFFFF;
+	cursor: pointer;
+}
+.banner{
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+}
+.banner h1{
+	color:#D0FF00;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:1.9em;	
+}
+.banner p{
+	color: #000000;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:1.2em;
+	margin: 0 5px;
+	transition: color ease-out 5s;
+	transition-delay: 3s;
+}
+.navbar{
+	height:11vh;
+	background-color:#000000;
+	position:fixed;
+	width:100%;
+	z-index: 1;
+}
+.nav-holder{
+	margin-left:65%;
+	background-color:#000000;
+	padding-top:10px;	
+}
+.nav-link{
+	display:inline;
+	list-style-type:none;
+	margin-right:10%;
+}
+.nav-link a{
+	text-decoration:none;
+	color:#2AFF00;
+}
+.nav-link a:hover{
+	color:#FFFFFF;
+}
+.boxes{
+	width:250px;
+	height:150px;
+	margin:10px;
+	border-radius:6px;
+	display:flex;
+	justify-content:center;
+	opacity: 0.7;
+}
+.boxes:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+.boxes p{
+	font-family:sans-serif;
+	display: block;
+	align-self: flex-end;
+	background-color:yellow;
+	color:black;
+	padding:4px;
+	height: 15px;
+}
+.blank-boxes {
+	background-color: #868686;
+}
+.rugBtn{
+	background-color:#FFFFFF;
+	border:2px solid #2AFF00;
+	border-radius:3px 3px 30px 30px;
+	font-size:15px;
+	margin:5%;
+	padding:10px;
+	height: 50px;
+}
+.rugBtn:hover{
+	background-color:#2AFF00;
+	color:#FFFFFF;
+	cursor: pointer;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 4.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.typewriter p {
+	overflow: hidden;
+	color: #ffffff;
+	border-right: .15em solid #000000;
+	white-space: nowrap;
+	margin: 0 auto;
+	animation:
+    typing 4.5s steps(30, end);
+	animation-delay: 3s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+	to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+	50% { border-color: orange }
+}
+
+@media(max-width: 800px) {
+	.boxes{
+		width:auto;
+		height:100px;
+		margin:6px;
+	}
+	.boxes p {
+		font-size: 10px;	
+	}
+}
+
+@media(max-width:600px){
+	body{
+		margin:auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #000000;
+	}
+	#burg {display: block;}
+	#label{
+		margin:auto;
+	}
+	#rug{
+		margin: 50px 0;
+		padding-top:0px;
+	}
+	#btnHolder{
+		flex-wrap:wrap;
+	}
+	.boxes p {
+		font-size: 7px;	
+	}
+	.rugBtn{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+	.navbar{
+		margin:auto;
+		position:relative;
+		display:flex;
+		flex-direction:row;
+		height: 14vh;
+	}
+	.nav-holder {
+		visibility: hidden;
+		width:100%;
+		text-align:center;
+		margin-left:-10%;
+		margin-top: -100px;
+		transition: margin-top ease-in 1s;
+	}
+	.nav-holder.active {
+		visibility: visible;
+		margin-top: 0;
+	}
+	.nav-link{
+		display:flex;
+		flex-direction:column;
+		margin:3px;
+		border:2px solid #FFFFFF;
+		border-radius:7px;
+		width:100%;
+	}
+	.nav-link:hover{
+		background-color:#2AFF00;
+		color:#FFFFFF;
+		border-color:#000000;
+	}
+	.boxes{
+		width:auto;
+		height:100px;
+		margin:6px;
+	}
+	.prjtBtn{
+		display:flex;
+		justify-content:center;
+		margin:auto;
+		font-size: 10px;
+		height: 30px;
+		width: 90px;
+		margin: 20px 0;
+	}
+}
