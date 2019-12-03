@@ -203,8 +203,11 @@ h3{
     blink-caret .5s step-end infinite;
 }
 .typewriter p {
+	color: #000000;
+}
+.roll {
 	overflow: hidden;
-	color: #ffffff;
+	color: #ffffff !important;
 	border-right: .15em solid #000000;
 	white-space: nowrap;
 	margin: 0 auto;
