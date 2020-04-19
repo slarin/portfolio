@@ -12,10 +12,10 @@
 <div class="navbar">
 	<div class="nav-holder" id="nav">
 		<ul>
-		<li class="nav-link"><a href="https://codepen.io/slarin/">about</a></li>
+			<!--<li class="nav-link"><a href="https://codepen.io/slarin/">about</a></li>-->
     	<li class="nav-link"><a href="https://github.com/slarin">code</a></li>
     	<li class="nav-link"><a href="mailto:seunfadeyi@gmail.com">contact</a></li>
-    	</ul>
+		</ul>
 		</div>
 
 		<button id="burg" class="hamburger hamburger--spin" type="button" onclick="burger()">
@@ -26,10 +26,10 @@
 
 </div>
 
-<div id="welcome-section" class="banner">
+<div id="welcome-section" class="banner" onclick="draw()">
 <div id="label" class="typewriter">
 <h1>Hi, I'm Seun.</h1>
-<p id="deets"> a web developer, &#128578;</p>
+<p id="deets" class="deets"> a web developer, &#128578;</p>
 </div>
 </div>
 
@@ -40,12 +40,12 @@
 <div id="" class="boxes blank-boxes"></div>
 <div id="one" class="boxes" onClick="window.location.href='https://rawcdn.githack.com/slarin/Church-Website-Template/46c9b454fc35b58977b4446fc1d433d534811ee0/index.html'"><a href="https://rawcdn.githack.com/slarin/Church-Website-Template/46c9b454fc35b58977b4446fc1d433d534811ee0/index.html"><p>Church</p></a></div>
 <div id="" class="boxes blank-boxes"></div>
-<div id="five" class="boxes" onClick="window.location.href='https://search-photos.surge.sh/'"><a href="https://search-photos.surge.sh/"><p>Search Photos</p></a></div>
-<div id="two" class="boxes" onClick="window.location.href='https://joes-kitchen.surge.sh/'"><a href="https://joes-kitchen.surge.sh/"><p>Joe's Kitchen</p></a></div>
-<div id="six" class="boxes" onClick="window.location.href='http://youthful-metal.surge.sh/'"><a href="http://youthful-metal.surge.sh/"><p>Gravity</p></a></div>
-<div id="four" class="boxes" onClick="window.location.href='http://tranquil-week.surge.sh/'"><a href="http://tranquil-week.surge.sh/"><p>tranquil</p></a></div>
 <div id="" class="boxes blank-boxes"></div>
-<div id="three" class="boxes" onClick="window.location.href='https://codepen.io/slarin/full/xexjXj'"><p>JS Documentation</p></div>
+<div id="two" class="boxes" onClick="window.location.href='https://joes-kitchen.surge.sh/'"><a href="https://joes-kitchen.surge.sh/"><p>Joe's Kitchen</p></a></div>
+<div id="" class="boxes blank-boxes"></div>
+<div id="four" class="boxes" onClick="window.location.href='http://tranquil-week.surge.sh/'"><a href="http://tranquil-week.surge.sh/"><p>tranquil</p></a></div>
+<div id="five" class="boxes" onClick="window.location.href='https://search-photos.surge.sh/'"><a href="https://search-photos.surge.sh/"><p>Search Photos</p></a></div>
+<div id="three" class="boxes" onClick="window.location.href='https://san-wo-canoe.herokuapp.com/'"><a href="https://san-wo-canoe.herokuapp.com/"><p>san-wo-canoe</p></a></div>
 
 </div>
 <button class="prjtBtn" onClick="window.location.href='https://github.com/slarin'">Show Others</button>
@@ -55,22 +55,32 @@
 <h1>Let's work together ...</h1>
 <p>How do you like your tea?</p>
 <div id="btnHolder">
-<button class="rugBtn" onClick="window.location.href='https://github.com/slarin'">GitHub</button>
-<button class="rugBtn" onClick="window.location.href='mailto:seunfadeyi@gmail.com'">Send E-mail</button>
-<button class="rugBtn" onClick="window.location.href='tel:+2347062246781'">Call Me</button>
+<div>
+	<span class="steam"></span>
+	<button class="rugBtn" onClick="window.location.href='https://github.com/slarin'">GitHub</button>
+</div>
+<div>
+	<span class="steam"></span>
+	<button class="rugBtn" onClick="window.location.href='mailto:seunfadeyi@gmail.com'">Send E-mail</button>
+</div>
+<div>
+	<span class="steam"></span>
+	<button class="rugBtn" onClick="window.location.href='tel:+2347062246781'">Call Me</button>
+</div>
 </div>
 
 <div id="footer">
-<p>Image credit: <a href="https://en.wikipedia.org/wiki/Star_Wars">Star Wars</a> starwars.com</p>
+<p>[ insert some cool copyright thing here ]</p>
 </div>
 </div>
 
 <script>
 	window.onload =
-		function() {
-			let a = document.getElementById('deets');
-			a.classList.add('roll');
-		}
+		setTimeout(
+			function() {
+				let a = document.getElementById('deets');
+				a.classList.add('roll');
+			}, 6000);
 	function burger() {
 		let y = document.getElementById('burg');
 		let x = document.getElementById('nav');
@@ -78,5 +88,6 @@
 		x.classList.toggle('active');
 	}
 </script>
+<script src="index.js"></script>
 </body>
 </html>

@@ -1,34 +1,58 @@
 @charset "utf-8";
 /* CSS Document */
+a	{
+	text-decoration: none;
+}
 body{
 	margin:0px;
 	padding:0px;
-	background-image:url(./assets/Image__213166_1491240125.jpeg);
 	font-family: sans-serif;
 }
 h3{
 	text-align:center;
 	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-	color:#fd561e;
+	color:#F13C00;
 	margin-bottom:5%;
 }
 #burg { display: none;}
 #welcome-section {
 	height: 100vh;
+	background-image: url("assets/swirls.gif");
+	background-size: cover;
+	background-blend-mode: darken;
 	display: flex;
 	flex-direction: column nowrap;
 	align-content: center;
+	transition: height ease-in 400ms;
+}
+.deets {
+	display: none;
+}
+#welcome-section.active {
+	height: 40vh;
+	z-index: -1;
+}
+#label.active {
+	display: none;
+}
+#middle {
+	transition: all 1000ms;
+	position: fixed;
+	top: 50vh;
+}
+#middle.active{
+	top: 10vh;
 }
 #footer{
 	margin:3% 10% -15% 10%;
-	border:1px solid #E0E0E0;
+	border:1px solid #f6f8f9;
 	border-radius:5px 5px 0px 0px;
-	background-color:#E0E0E0;
+	background-color:#f6f8f9;
 	padding:1.5%;
 }
 #footer p{
-	font-size:medium;
-	color:#000000;
+	font-size: 0.7em;
+	color:#014701;
 }
 #footer a{
 	text-decoration:underline;
@@ -40,14 +64,14 @@ h3{
 #projects{
 	margin:3% 5%;
 	border-radius:5px;
-	background-color:rgba(224, 224, 224, 0.322);
+	background-color:#f6f8f9;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 }
 #catalogue{
 	display:grid;
-	grid-template-columns: repeat(3, minmax(30px, 1fr));
+	grid-template-columns: repeat(3, minmax(90px, 1fr));
 	grid-template-rows: repeat(2, 1fr);
 	align-self: center;
 }
@@ -62,13 +86,13 @@ h3{
 	text-align:center;
 }
 #rug>p {
-	color: #2AFF00;
+	color: #014701;
 }
 #btnHolder{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
-	margin: 0 70px;
+	margin: 40px 70px;
 }
 #one{
 	background-image:url(./assets/church.png);
@@ -79,7 +103,7 @@ h3{
 	background-size:cover;
 }
 #three{
-	background-image:url(./assets/jsDocumentation.png);
+	background-image:url(./assets/san-wo-canoe.png);
 	background-size:cover;
 }
 #four{
@@ -117,12 +141,12 @@ h3{
 	text-align: center;
 }
 .banner h1{
-	color:#D0FF00;
+	color:#000000;
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-	font-size:1.9em;	
+	font-size: 1.9em;	
 }
 .banner p{
-	color: #000000;
+	color: #ffffff;
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-size:1.2em;
 	margin: 0 5px;
@@ -131,27 +155,27 @@ h3{
 }
 .navbar{
 	height:11vh;
-	background-color:#000000;
+	background-color:#ffffff;
 	position:fixed;
 	width:100%;
 	z-index: 1;
 }
 .nav-holder{
-	margin-left:65%;
-	background-color:#000000;
-	padding-top:10px;	
+	margin-left:75%;
+	background-color:#ffffff;
 }
 .nav-link{
 	display:inline;
 	list-style-type:none;
 	margin-right:10%;
+	font-weight: bold;
 }
 .nav-link a{
 	text-decoration:none;
-	color:#2AFF00;
+	color:#014701;
 }
 .nav-link a:hover{
-	color:#FFFFFF;
+	color:#07d355;
 }
 .boxes{
 	width:250px;
@@ -166,10 +190,13 @@ h3{
 	cursor: pointer;
 	opacity: 1;
 }
+.boxes a{
+	align-self: flex-end !important;
+}
 .boxes p{
 	font-family:sans-serif;
 	display: block;
-	align-self: flex-end;
+	align-self: flex-end !important;
 	background-color:yellow;
 	color:black;
 	padding:4px;
@@ -177,6 +204,44 @@ h3{
 }
 .blank-boxes {
 	background-color: #868686;
+}
+.steam {
+	position: relative;
+	top:0px;
+	left: 25px;
+	animation: steam 5s linear infinite 3s;
+}
+.steam:before,.steam:after {
+  content: " ";
+  position: absolute;
+  top: -150px;
+  left: 15px;
+  border-right: 0px solid transparent;
+  border-top: 2px solid #cccccc;
+  border-left: 5px solid #cccccc;
+  border-bottom: 2px solid transparent;
+  width: 20px;
+  height: 35px;
+  z-index: 4;
+	border-radius: 80% 0 10% 10%;
+	transform: rotate(168deg) skewY(10deg);
+	filter: blur(4px);
+}
+.steam:after {
+	top: -125px;
+	left: 8px;
+	z-index: 4;
+	border-radius: 80% 0 10% 10%;
+	filter: blur(4px);
+	transform: rotate(315deg) skewY(10deg);
+}
+@keyframes steam {
+	0% { top: 100px; opacity: .075; visibility: visible; }
+	20% { top: 80px; opacity: 0.2; }
+	40% { top: 60px; opacity: 0.4; }
+	60% { top: 40px; opacity: 0.2; }
+	80% { top: 20px; opacity: .075; }
+	100% { top: 0px; opacity: 0; visibility: hidden; }
 }
 .rugBtn{
 	background-color:#FFFFFF;
@@ -186,11 +251,14 @@ h3{
 	margin:5%;
 	padding:10px;
 	height: 50px;
+	min-width: 30px;
+	transition: min-width 600ms;
 }
 .rugBtn:hover{
 	background-color:#2AFF00;
 	color:#FFFFFF;
 	cursor: pointer;
+	min-width: 10%;
 }
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -202,18 +270,13 @@ h3{
     typing 4.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
-.typewriter p {
-	color: #000000;
-}
 .roll {
+	display: block;
 	overflow: hidden;
-	color: #ffffff !important;
-	border-right: .15em solid #000000;
+	color: #014701 !important;
 	white-space: nowrap;
 	margin: 0 auto;
-	animation:
-    typing 4.5s steps(30, end);
-	animation-delay: 3s;
+	animation: typing 4.5s steps(30, end);
 }
 
 /* The typing effect */
@@ -227,8 +290,17 @@ h3{
   from, to { border-color: transparent }
 	50% { border-color: orange }
 }
+@media(min-width: 1400px) {
+	#welcome-section {
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
 
 @media(max-width: 800px) {
+	#welcome-section {
+		background-repeat: repeat-x;
+	}
 	.boxes{
 		width:auto;
 		height:100px;
@@ -244,7 +316,9 @@ h3{
 		margin:auto;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-color: #000000;
+	}
+	#catalogue {
+		width: 100%;
 	}
 	#burg {display: block;}
 	#label{
@@ -253,9 +327,20 @@ h3{
 	#rug{
 		margin: 50px 0;
 		padding-top:0px;
+		font-size: 0.7em !important;
 	}
 	#btnHolder{
-		flex-wrap:wrap;
+		flex-flow: row-reverse;
+	}
+	#welcome-section {
+		height: 85vh;
+	}
+	.rugBtn {
+		font-size: 7px;
+		margin:5% 2%;
+		padding:10px;
+		height: 35px;
+		border-radius:3px 3px 15px 15px;
 	}
 	.boxes p {
 		font-size: 7px;	
@@ -282,12 +367,12 @@ h3{
 	}
 	.nav-holder.active {
 		visibility: visible;
-		margin-top: 0;
+		margin-top: 25px;
 	}
 	.nav-link{
 		display:flex;
 		flex-direction:column;
-		margin:3px;
+		margin:15px 0;
 		border:2px solid #FFFFFF;
 		border-radius:7px;
 		width:100%;
@@ -295,7 +380,7 @@ h3{
 	.nav-link:hover{
 		background-color:#2AFF00;
 		color:#FFFFFF;
-		border-color:#000000;
+		border-color:#014701;
 	}
 	.boxes{
 		width:auto;
@@ -310,5 +395,15 @@ h3{
 		height: 30px;
 		width: 90px;
 		margin: 20px 0;
+	}
+	.steam:before, .steam:after {
+		left: -5vw;
+		top: -100px;
+		width: 8px;
+  	height: 30px;
+	}
+	.steam:after {
+		left: -7vw;
+		top: -80px;
 	}
 }
