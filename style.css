@@ -17,8 +17,9 @@ h3{
 #burg { display: none;}
 #welcome-section {
 	height: 100vh;
-	background-image: url("assets/swirls.gif");
+	background-image: url("assets/R9OueKOtGGU_Full.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-blend-mode: darken;
 	display: flex;
 	flex-direction: column nowrap;
@@ -31,6 +32,7 @@ h3{
 #welcome-section.active {
 	height: 40vh;
 	z-index: -1;
+	background-image: url("assets/gyro.jpg");
 }
 #label.active {
 	display: none;
@@ -76,10 +78,10 @@ h3{
 	align-self: center;
 }
 #label{
-	margin-top: 50vh;
 	display: flex;
 	flex-flow: column nowrap;
-	align-self: center;
+	align-self: flex-end;
+	margin: 40vh 5vw;
 }
 #rug{
 	padding-top:40px;
@@ -290,16 +292,30 @@ h3{
   from, to { border-color: transparent }
 	50% { border-color: orange }
 }
-@media(min-width: 1400px) {
+
+@media(min-width: 2500px) {
+	body {
+		font-size: 2.5em;
+	}
+}
+@media(min-width: 1100px) {
+	body {
+		font-size: 1.2em;
+	}
 	#welcome-section {
-		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: 60vw 100vh;
+	}
+	#welcome-section.active {
+		background-repeat: repeat;
+	}
+	#label {
+		margin: 40vh 10vw;
 	}
 }
 
 @media(max-width: 800px) {
 	#welcome-section {
-		background-repeat: repeat-x;
+		
 	}
 	.boxes{
 		width:auto;
@@ -314,8 +330,7 @@ h3{
 @media(max-width:600px){
 	body{
 		margin:auto;
-		background-size: cover;
-		background-repeat: no-repeat;
+		
 	}
 	#catalogue {
 		width: 100%;
